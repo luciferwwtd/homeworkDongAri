@@ -1,0 +1,26 @@
+클래스 실습 [심화]
+
+조건에 맞춰 자유롭게 클래스를 구상하시오. 실제로 돌아가지 않는 코드여도 상관 없습니다.
+
+{조건}
+1. 자신이 원하는 주제를 정할것
+2. 주제에 맞게 클래스를 구상하거나 제작할것.
+
+[예시]
+
+import random
+
+class MyGame:
+    def __init__(self, name):
+        self.name = name
+
+    def gamble(self):
+        num = random.randint(1, 10)
+        ans = int(input("Choose a number between 1 and 10"))
+        if ans > 10:
+            return "Number Incorrect"
+        else:
+            if ans == num:
+                return "Win"
+            else:
+                return "Lost"
