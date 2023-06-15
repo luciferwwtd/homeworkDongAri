@@ -14,5 +14,7 @@ a = "AB"
 b = 1
 c = "C"
 d = 1.1
+e = 0o12
+f = 0xFF
 
-print("%s, %d, %c, %f, %%" % (a, b, c, d))
+print("%s, %d, %c, %f, %o, %x, %%" % (a, b, c, d, e, f))
