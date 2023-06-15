@@ -1,0 +1,106 @@
+외장함수 : 파이썬 설치시 함께 설치되거나 추가로 설치
+random.randint() 에서 random 등
+import하여 사용한다.
+
+
+[sys 모듈]
+
+
+명령행에서 인수전달 (sys.argv) :
+아래 코드를 메모장에서 'test.py'파일로 작성한 뒤, 'C:/Python'폴더에 저장
+# test.py
+import sys
+print(sys.argv)
+
+도스창(Window키+R -> cmd입력)에서 다음과 같이 실행
+C:/Python> python test.py I Love Python
+['test.py', 'I', 'Love' 'Python']
+
+강제로 IDLE 인터프리터 창 종료하기 (sys.exit)
+import sys
+...
+sys.exit()
+
+자신이 만든 모듈 사용 (sys.path)
+import sys
+...
+sys.path.append("C:/Python/MyProject")
+
+
+[os 모듈]
+
+
+시스템의 환경변수 값
+os.environ
+print(os.environ)
+
+디렉토리 위치변경
+os.chdir
+os.chdir("C:\WINDOWS")
+
+현재 디렉토리 위치 리턴
+os.getcwd
+print(os.getcwd())
+
+시스템 명령어 호출
+os.system
+os.system("dir")
+
+실행한 시스템 명령어의 결과값 리턴
+os.popen
+a=os.popen("dir")
+print(a.read())
+
+디렉터리 생성
+os.mkdir
+os.mkdir(디렉터리)
+
+비어있는 디렉터리 삭제
+os.rmdir
+os.rmdir(디렉터리)
+
+파일 삭제
+os.unlink
+os.unlink(파일)
+
+src라는 이름의 파일을 dst라는 이름으로 변경
+os.rename(src, dst)
+os.rename("a.txt", "b.txt")
+
+
+[time 모듈]
+
+
+UTC표준을 기준으로 현재시간을 실수로 리턴. 1970년 1월 1일 0시 0분 0초부터 지난 시간을 초 단위로 리턴
+time.time
+print(time.time())
+
+연도, 월, 일, 시,.. 의 형태로 변환
+time.localtime
+print(time.localtime(time.time()))
+
+~초 쉬었다가 뒤에 문장 수행
+time.sleep
+time.sleep(1)	반복문에서 주로 사용
+
+
+[calendar 모듈]
+
+
+달력을 쓴다.
+import calendar
+print(calendar.calendar(2017))
+calendar.prmonth(2017, 10)
+
+
+[random 모듈]
+
+
+import random
+random.random()		# 0.0 ~ 1.0 사이의 실수중에 난수값을 발생
+random.randint(1, 10)	# 1 ~ 10 사이의 정수중에 난수값을 발생
+
+import random
+a = [1, 2, 3, 4, 5]
+random.shuffle(a)		# 리스트를 무작위로 섞어버린다.
+random.choice(a)		# 무작위로 하나를 선택하여 리턴
