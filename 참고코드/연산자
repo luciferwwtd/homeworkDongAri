@@ -1,0 +1,70 @@
+연산자들의 모음이다.
+
+[산술 연산자]
++, -, *, / : 더하기, 빼기, 곱하기, 나누기
+% : 나머지 연산자
+// : 몫 연산자로 소수점을 버림
+
+[관계 연산자]
+결과는 boolean 형태이며, 조건이 필요한 경우 사용한다. 두 수의 크기를 비교하거나 두 값이 같거나 다른지 확인할 때 사용한다.
+크기 비교 : <(미만), <=(이하), >(초과), >=(이상)
+동등 비교 : ==(같다), !=(같지ㅏ 않다)
+
+[논리 연산자]
+결과는 boolean 형태이며, 조건이 필요한 경우 사용한다. 두 조건이 동시, 또는 최소한 하나를 만족 할 때의 조건이 필요하거나 조건이 거짓일 때를 판별할 때 사용한다.
+x and y : x와 y 모두 참이어야 참
+x or y : x와 y 둘 중에 하나만 참이면 참
+not x : x가 거짓이면 참
+
+[기타 연산자]
+is : 동일 객체인지 비교
+a+=2는 a = a + 2와 같은 말이다.
+
+IN, NOT IN
+x in 리스트 : x가 리스트에 있는지
+x not in 리스트 : x가 리스트에 없는지
+x in 튜플	x : x가 튜플안에 있는지
+x not in 튜플 : x가 튜플안에 없는지
+x in 문자열 : x가 문자열에 있는지
+x not in 문자열 : x가 문자열에 없는지
+
+[예시]
+
+if 1<2:
+    print("1 is lower than 2")
+if 1<=2:
+    print("1 is below 2")
+if 3>2:
+    print("3 is higher than 2")
+if 3>=2:
+    print("3 is more than 2")
+if 2==2:
+    print("2 equals 2. The most legit sh*t I've ever seen.")
+if 2!=3:
+    print("2 IS NOT 3")
+if 1+1==2 and 1+1!=3:
+    print("1+1 is 2, not 3")
+if 1+1==2 or 1+1!=2:
+    print("1+1 is 2, or 1+1 is not 2? waht")
+if not 1+1==1:
+    print("If you are not a monkey, you know that 1+1 is not 1")
+if "a" is "a":
+    print("a is a. yes.")
+
+a=1
+a+=1
+print(a)
+
+
+if "a" in ["a", "b"]:
+    print("a is in dat list")
+if "a" not in ['b', 'c']:
+    print("a is not in dat list")
+if "a" in ('a', 'b'):
+    print("a is in dat tuple")
+if "a" not in ('b', 'c'):
+    print("a is not in dat tuple")
+if "u" in "stupid":
+    print("u is in stupid")
+if "you" not in "stupid":
+    print("you are not in stupid. wait waht?")
